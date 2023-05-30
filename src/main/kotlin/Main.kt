@@ -47,8 +47,40 @@ fun main(){
     println(myNumInt)
 
 //    Long data type can store whole numbers from -9223372036854775807 to 9223372036854775807.
-    val myNumLong: Long = 15000000000L // Optionally, you can end the value with an "L":
+    val myNumLong = 15000000000L // Optionally, you can end the value with an "L":
     println(myNumLong)
 
 //    OPERATORS
+    val sum1 = 100 + 50
+    val sum2 = sum1 + 250
+    val sum3 = sum2 + sum2
+    println(sum1)
+    println(sum2)
+    println(sum3)
+
+//    STRINGS
+    val greeting = "Hello"
+    println(greeting)
+
+    val txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    println(txt[0])
+    println(txt[2])
+    println("The length of the string is: " + txt.length)
+    println(txt.lowercase())
+
+    val txt1 = "Hello World"
+    val txt2 = "Hello World"
+    println(txt1.compareTo(txt2))
+
+    val word = "Please locate where 'locate' occurs"
+    println(word.indexOf("locate"))
+
+    val firstName = "John"
+    val lastName = "Doe"
+    println("My name is $firstName $lastName")
+
+//    BOOLEANS
+   // println(10 == 15)
+
+//    IF ... ELSE
 }
