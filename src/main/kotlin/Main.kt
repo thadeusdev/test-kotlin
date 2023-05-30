@@ -1,3 +1,19 @@
+fun myFunction(){
+    println("I just got executed!")
+}
+
+fun myFirst(fname: String){
+    println("$fname Doe")
+}
+
+fun mySecond(fname: String, age: Int){
+    println("$fname is $age")
+}
+
+/* Return Values */
+fun myThird(x: Int): Int{
+    return (x + 5)
+}
 fun main(){
     // This is a comment
     print("Hello Peter")
@@ -83,4 +99,139 @@ fun main(){
    // println(10 == 15)
 
 //    IF ... ELSE
+    if (20 > 18){
+        println("20 is greater than 18")
+    }
+
+    val time = 20
+    if (time < 18){
+        println("Good day.")
+    }else{
+        println("Good evening.")
+    }
+
+    val clock = 22
+    if (clock < 10){
+        println("Good morning.")
+    }else if (clock < 20){
+        println("Good day.")
+    }else{
+        println("Good evening.")
+    }
+
+    val timer = 20
+    val greetings = if (timer < 18){
+        "Good day."
+    }else{
+        "Good evening."
+    }
+    println(greetings)
+
+//    WHEN
+    val day = 4
+    val result = when (day){
+        1 -> "Monday"
+        2 -> "Tuesday"
+        3 -> "Wednesday"
+        4 -> "Thursday"
+        5 -> "Friday"
+        6 -> "Saturday"
+        7 -> "Sunday"
+        else -> "Invalid day"
+    }
+    println(result)
+
+//    WHILE LOOP
+    var i = 0
+    while (i < 5){
+        println(i)
+        i++
+    }
+
+    /* Do..While Loop - execute once before checking if the condition is true */
+    var t = 0
+    do {
+        println(t)
+        t++
+    }
+    while(t < 5)
+
+//    BREAK & CONTINUE
+    /* Break - used to jump out of a loop */
+    var a = 0
+    while (a < 10){
+        println(a)
+        a++
+        if (a == 4){
+            break
+        }
+    }
+
+    /* Continue */
+    var b = 0
+    while (b < 10){
+        if (b == 4){
+            b++
+            continue
+        }
+        println(b)
+        b++
+    }
+
+//    ARRAYS
+    val cars = arrayOf("Volvo", "BMW", "Ford", "Mazda")
+    println(cars[0])
+    cars[0] = "Opel"
+    println(cars[0])
+
+    /* Length/Size */
+    println(cars.size)
+
+    /* check is an element exists */
+    if ("Volvo" in cars){
+        println("It exists!.")
+    }else{
+        println("It does not exist.")
+    }
+
+    /* Loop through an Array */
+    for (x in cars){
+        println(x)
+    }
+
+//    FOR LOOP
+    val numbers = arrayOf(1, 5, 10, 15, 20)
+    for (x in numbers){
+        println(x)
+    }
+
+//    RANGES
+    /* print the whole alphabet */
+    for (chars in 'a'..'x'){
+        println(chars)
+    }
+
+    for (nums in 5..15){
+        if (nums == 10){
+            break
+        }
+        println(nums)
+    }
+
+    for (x in 5..15){
+        if (x == 10){
+            continue
+        }
+        println(x)
+    }
+
+//    FUNCTIONS
+    /* function - is a block of code which only runs when it is called. */
+    myFunction()
+    myFirst("John")
+    mySecond("John", 35)
+
+    var resul = myThird(3)
+    println(resul)
+
 }
